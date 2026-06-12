@@ -1,11 +1,14 @@
 
-import { Input } from "./Input";
+import "../styles/Section.css"
 
-export function Section({labels}){
+export function Section({title, children}){
 
   return(
-    <section>
-      {labels.map(label => <Input label={label}/>)}
+    <section className="section">
+      <h2>{title}</h2>
+      {children}
     </section>
   )
 }
+
+

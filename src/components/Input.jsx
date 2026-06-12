@@ -1,16 +1,13 @@
-import { useState } from 'react';
-
-export function Input({ label }) {
-  const [value, setValue] = useState('');
-
+export function Input({ label, type="text", value, onChange }) {
   return (
     <>
       <label>{label}</label>
       <input
-        type="text"
+        type={type}
         value={value}
-        onChange={(e) => setValue(e.target.value)}
+        onChange={onChange}
       />
     </>
   );
 }
+
